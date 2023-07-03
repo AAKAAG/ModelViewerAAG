@@ -13,11 +13,12 @@
 
 <body>
   <div style="width: 100vw; height: 100vh;">
-  <model-viewer id="model-viewer" src="/M08.glb" ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" skybox-image="./aircraft_workshop_01_1k.hdr">
+  <model-viewer id="model-viewer" src="/M08.glb" ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" skybox-image="./aircraft_workshop_01_1k.hdr" ios-src="./M08.usdz">
     <div id="error" class="hide">AR is not supported on this device</div>
     <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
       👋 Activate AR
   </button>
+  
   </model-viewer>
 </div>
   <script>
