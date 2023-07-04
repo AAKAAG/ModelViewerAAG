@@ -19,21 +19,20 @@
       👋 Activate AR
   </button>
 -->
-  </model-viewer>
-  <model-viewer 
-  ar ar-modes="scene-viewer webxr"
-  camera-controls touch-action="pan-y"
-  environment-image="./aircraft_workshop_01_1k.hdr"
-  skybox-image="./mobile-phone-1875813-1920_ver_1.jpg"  
-  alt="A 3D model of a sphere reflecting a sunrise" 
-  src="./reflective-sphere.gltf" ios-src="./scene.usdz" 
-  shadow-intensity="1">
+<model-viewer 
+src="./reflective-sphere.gltf" ios-src="./scene.usdz"
+ar ar-modes="webxr scene-viewer quick-look" 
+camera-controls poster="./poster.webp" 
+shadow-intensity="1" 
+environment-image="music_hall_01_1k.hdr" 
+auto-rotate camera-target="0m 0m 0m">
 
-    <div id="error" class="hide">AR is not supported on this device</div>
-    <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
-      👋 Activate AR
-  </button>
+<div id="error" class="hide">AR is not supported on this device</div>
+<button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+  👋 Activate AR
+</button>
   </model-viewer>
+ 
 </div>
   <script>
     document.querySelector("#model-viewer").addEventListener('ar-status', (event) => {
