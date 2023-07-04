@@ -21,16 +21,22 @@
 -->
   </model-viewer>
   <model-viewer 
-  ar ar-modes="scene-viewer webxr"
+ 
   camera-controls touch-action="pan-y"
   
   alt="A 3D model of a sphere reflecting a sunrise" 
-  src="./scene.glb" >
+  src="./scene.glb" 
 
-    <div id="error" class="hide">AR is not supported on this device</div>
-    <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
-      👋 Activate AR
+  ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate environment-image="legacy">
+  <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+  </div>
+  <button slot="ar-button" id="ar-button">
+      View in your space
   </button>
+  <div id="ar-prompt">
+      <img src="ar_hand_prompt.png">
+  </div>
   </model-viewer>
 </div>
   <script>
